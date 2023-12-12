@@ -1,0 +1,13 @@
+runtime: python
+api_version: 1
+threadsafe: true
+version: harmonyworks-music
+
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
